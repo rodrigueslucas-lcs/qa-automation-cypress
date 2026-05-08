@@ -1,7 +1,7 @@
 name: Cypress Tests
 
 on:
-  push:
+ push:
     branches:
       - master
 
@@ -13,11 +13,16 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Instalar dependências
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
         run: npm install
 
-      - name: Dar permissão ao Cypress
-        run: chmod +x ./node_modules/.bin/cypress
+      - name: Cypress verify
+        run: npx cypress verify
 
-      - name: Rodar testes Cypress
-        run: npx cypress run
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
