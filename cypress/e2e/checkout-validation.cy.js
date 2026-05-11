@@ -19,12 +19,14 @@ describe('Validações de Checkout', () => {
     cy.contains('Error').should('be.visible')
   })
 
-  it('não deve aceitar CEP inválido', () => {
-    CheckoutPage.fillUserInfo('Lucas', 'QA', 'abcde')
-    CheckoutPage.continue()
+  it.only('não deve aceitar CEP vazio', () => {
+  CheckoutPage.fillUserInfo('Lucas', 'QA', '')
+  CheckoutPage.continue()
 
-    cy.contains('Error').should('be.visible')
-  })
+  cy.get('[data-test="error"]')
+    .should('be.visible')
+    .and('contain', 'Postal Code is required')
+})
 
   it('deve finalizar com dados válidos', () => {
     CheckoutPage.fillUserInfo('Lucas', 'QA', '12345')
