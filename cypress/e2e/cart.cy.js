@@ -3,11 +3,9 @@ import InventoryPage from '../../pages/InventoryPage'
 
 describe('Carrinho SauceDemo', () => {
   beforeEach(() => {
-    LoginPage.visit()
-    LoginPage.fillUsername('standard_user')
-    LoginPage.fillPassword('secret_sauce')
-    LoginPage.submit()
-  })
+  LoginPage.visit()
+  LoginPage.login('standard_user', 'secret_sauce')
+})
 
   it('deve adicionar produto ao carrinho', () => {
     InventoryPage.addBackpackToCart()

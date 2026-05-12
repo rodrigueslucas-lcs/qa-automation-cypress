@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-12T17:47:40.682Z",
+    "end": "2026-05-12T17:47:44.048Z",
+    "duration": 3366,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d85b3ab8-33f2-4d29-ac35-95aa9a49da55",
+      "title": "",
+      "fullFile": "cypress\\e2e\\checkout.cy.js",
+      "file": "cypress\\e2e\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1934955d-0bd1-41af-b372-957c0111f174",
+          "title": "Checkout SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve finalizar compra com sucesso",
+              "fullTitle": "Checkout SauceDemo deve finalizar compra com sucesso",
+              "timedOut": null,
+              "duration": 2376,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.addBackpackToCart();\n_InventoryPage.default.goToCart();\n_CheckoutPage.default.goToCheckout();\n_CheckoutPage.default.fillUserInfo('Lucas', 'QA', '12345');\n_CheckoutPage.default.continue();\n_CheckoutPage.default.finish();\n_CheckoutPage.default.validateSuccess();",
+              "err": {},
+              "uuid": "1bc36e56-7070-40c7-ba98-967695de4318",
+              "parentUUID": "1934955d-0bd1-41af-b372-957c0111f174",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1bc36e56-7070-40c7-ba98-967695de4318"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2376,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

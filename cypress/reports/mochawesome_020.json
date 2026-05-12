@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-11T18:29:36.358Z",
+    "end": "2026-05-11T18:29:38.983Z",
+    "duration": 2625,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b408057-8ddb-4a3a-9dde-64638fafd0ba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api-error.cy.js",
+      "file": "cypress\\e2e\\api-error.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa7be5c8-faac-48aa-9612-bc52c946dbb0",
+          "title": "API Error Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve mockar erro 500 da API",
+              "fullTitle": "API Error Tests deve mockar erro 500 da API",
+              "timedOut": null,
+              "duration": 682,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('GET', 'https://jsonplaceholder.typicode.com/posts/1', {\n  statusCode: 500,\n  body: {\n    error: 'Erro interno do servidor'\n  }\n}).as('serverError');\ncy.visit('https://example.cypress.io');\ncy.window().then(win => {\n  return win.fetch('https://jsonplaceholder.typicode.com/posts/1');\n});\ncy.wait('@serverError').then(interception => {\n  expect(interception.response.statusCode).to.eq(500);\n  expect(interception.response.body.error).to.eq('Erro interno do servidor');\n});",
+              "err": {},
+              "uuid": "bc3f0fc9-f941-43d2-bb7c-69a91b56ef70",
+              "parentUUID": "aa7be5c8-faac-48aa-9612-bc52c946dbb0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc3f0fc9-f941-43d2-bb7c-69a91b56ef70"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 682,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

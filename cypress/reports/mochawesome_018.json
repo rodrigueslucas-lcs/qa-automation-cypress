@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-11T16:48:50.784Z",
+    "end": "2026-05-11T16:48:56.019Z",
+    "duration": 5235,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e34cee5b-a842-4d0a-8dfd-5d5b1628314c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b1e665be-34ca-4888-a4ee-252f1a03640d",
+          "title": "Login SauceDemo com Env",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login com sucesso",
+              "fullTitle": "Login SauceDemo com Env login com sucesso",
+              "timedOut": null,
+              "duration": 991,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(Cypress.env('username'), Cypress.env('password'));\ncy.url().should('include', '/inventory.html');",
+              "err": {},
+              "uuid": "4ed5a65e-34ac-4775-aba1-84827fa6075a",
+              "parentUUID": "b1e665be-34ca-4888-a4ee-252f1a03640d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login inválido",
+              "fullTitle": "Login SauceDemo com Env login inválido",
+              "timedOut": null,
+              "duration": 3220,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(Cypress.env('username'), 'errada');\ncy.get('[data-test=\"error\"]').should('be.visible');",
+              "err": {},
+              "uuid": "966f1166-aa8b-45d4-8c5b-9e4ed29fedd8",
+              "parentUUID": "b1e665be-34ca-4888-a4ee-252f1a03640d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4ed5a65e-34ac-4775-aba1-84827fa6075a",
+            "966f1166-aa8b-45d4-8c5b-9e4ed29fedd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4211,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

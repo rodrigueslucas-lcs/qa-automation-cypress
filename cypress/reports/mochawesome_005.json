@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-11T16:45:16.402Z",
+    "end": "2026-05-11T16:45:17.195Z",
+    "duration": 793,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bcf2f5af-0a8a-4506-b90e-b65cc9b28519",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api.cy.js",
+      "file": "cypress\\e2e\\api.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "deve criar um post com sucesso",
+          "fullTitle": "deve criar um post com sucesso",
+          "timedOut": null,
+          "duration": 256,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.request({\n  method: 'POST',\n  url: 'https://jsonplaceholder.typicode.com/posts',\n  body: {\n    title: 'Teste API',\n    body: 'Automação com Cypress',\n    userId: 1\n  }\n}).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body).to.have.property('id');\n  expect(response.body.title).to.eq('Teste API');\n  expect(response.body.body).to.eq('Automação com Cypress');\n  expect(response.body.userId).to.eq(1);\n});",
+          "err": {},
+          "uuid": "88d7644e-0899-4de1-aa46-6d72cbfedc94",
+          "parentUUID": "bcf2f5af-0a8a-4506-b90e-b65cc9b28519",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "não deve realizar login sem API Key",
+          "fullTitle": "não deve realizar login sem API Key",
+          "timedOut": null,
+          "duration": 431,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/login',\n  failOnStatusCode: false,\n  body: {\n    email: 'eve.holt@reqres.in',\n    password: 'cityslicka'\n  }\n}).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body).to.have.property('error');\n  expect(response.body.error).to.eq('missing_api_key');\n});",
+          "err": {},
+          "uuid": "3afa219a-e1c8-43c3-a7d1-eabde6ea5961",
+          "parentUUID": "bcf2f5af-0a8a-4506-b90e-b65cc9b28519",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "8b1cffbe-5038-44e1-a888-e0f076706c23",
+          "title": "API Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve buscar um post com sucesso",
+              "fullTitle": "API Tests deve buscar um post com sucesso",
+              "timedOut": null,
+              "duration": 36,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://jsonplaceholder.typicode.com/posts/1'\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('id');\n  expect(response.body).to.have.property('title');\n  expect(response.body).to.have.property('body');\n  expect(response.body.id).to.eq(1);\n  expect(response.body.userId).to.eq(1);\n});",
+              "err": {},
+              "uuid": "3d8bf900-e963-44d1-8a94-78bf8404ff8b",
+              "parentUUID": "8b1cffbe-5038-44e1-a888-e0f076706c23",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d8bf900-e963-44d1-8a94-78bf8404ff8b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [
+        "88d7644e-0899-4de1-aa46-6d72cbfedc94",
+        "3afa219a-e1c8-43c3-a7d1-eabde6ea5961"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 687,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-11T18:29:43.432Z",
+    "end": "2026-05-11T18:29:43.684Z",
+    "duration": 252,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "9ccfb27c-eaf8-4282-91ed-9c2198845fe5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cart.cy.js",
+      "file": "cypress\\e2e\\cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8eed498f-cea8-4a7f-8b6d-0e9b67976281",
+          "title": "Carrinho SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve adicionar produto ao carrinho",
+              "fullTitle": "Carrinho SauceDemo deve adicionar produto ao carrinho",
+              "timedOut": null,
+              "duration": 181,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.addBackpackToCart();\n_InventoryPage.default.validateCartCount(1);",
+              "err": {
+                "message": "TypeError: _LoginPage.default.fillUsername is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Carrinho SauceDemo`",
+                "estack": "TypeError: _LoginPage.default.fillUsername is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Carrinho SauceDemo`\n    at Context.eval (webpack://qa-ai-project/./cypress/e2e/cart.cy.js:7:14)\n    at runnable.fn (http://localhost:52977/__cypress/runner/cypress_runner.js:146755:19)\n    at callFn (http://localhost:52977/__cypress/runner/cypress_runner.js:165952:21)\n    at Runnable.run (http://localhost:52977/__cypress/runner/cypress_runner.js:165939:7)\n    at <unknown> (http://localhost:52977/__cypress/runner/cypress_runner.js:172036:30)\n    at PassThroughHandlerContext.finallyHandler (http://localhost:52977/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (http://localhost:52977/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52977/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:52977/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "35227191-c1b2-47a5-b342-f53785abd45c",
+              "parentUUID": "8eed498f-cea8-4a7f-8b6d-0e9b67976281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deve acessar o carrinho",
+              "fullTitle": "Carrinho SauceDemo deve acessar o carrinho",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.addBackpackToCart();\n_InventoryPage.default.goToCart();\ncy.url().should('include', 'cart');",
+              "err": {},
+              "uuid": "deab399b-6df0-4c43-a56b-33005e13980f",
+              "parentUUID": "8eed498f-cea8-4a7f-8b6d-0e9b67976281",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "35227191-c1b2-47a5-b342-f53785abd45c"
+          ],
+          "pending": [],
+          "skipped": [
+            "deab399b-6df0-4c43-a56b-33005e13980f"
+          ],
+          "duration": 181,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

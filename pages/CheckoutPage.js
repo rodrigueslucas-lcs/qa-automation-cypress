@@ -1,28 +1,36 @@
 class CheckoutPage {
+
   goToCheckout() {
-    cy.get('[data-test="checkout"]').click()
+    cy.get('[data-test="checkout"]').should('be.visible').click()
   }
 
   fillUserInfo(firstName, lastName, postalCode) {
-  if (firstName) {
-    cy.get('[data-test="firstName"]').type(firstName)
-  }
 
-  if (lastName) {
-    cy.get('[data-test="lastName"]').type(lastName)
-  }
+    cy.get('[data-test="firstName"]').clear()
 
-  if (postalCode) {
-    cy.get('[data-test="postalCode"]').type(postalCode)
+    if (firstName) {
+      cy.get('[data-test="firstName"]').type(firstName)
+    }
+
+    cy.get('[data-test="lastName"]').clear()
+
+    if (lastName) {
+      cy.get('[data-test="lastName"]').type(lastName)
+    }
+
+    cy.get('[data-test="postalCode"]').clear()
+
+    if (postalCode) {
+      cy.get('[data-test="postalCode"]').type(postalCode)
+    }
   }
-}
 
   continue() {
-    cy.get('[data-test="continue"]').click()
+    cy.get('[data-test="continue"]').should('be.visible').click()
   }
 
   finish() {
-    cy.get('[data-test="finish"]').click()
+    cy.get('[data-test="finish"]').should('be.visible').click()
   }
 
   validateSuccess() {

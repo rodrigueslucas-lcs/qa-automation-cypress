@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-05-11T16:45:44.198Z",
+    "end": "2026-05-11T16:45:46.952Z",
+    "duration": 2754,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "229d086b-6776-4685-bf2d-951f1481c49e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8d1ff7b2-1e46-4080-b62b-dd979b4bcc91",
+          "title": "Login SauceDemo com Env",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login com sucesso",
+              "fullTitle": "Login SauceDemo com Env login com sucesso",
+              "timedOut": null,
+              "duration": 1096,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(Cypress.env('username'), Cypress.env('password'));\ncy.url().should('include', '/inventory.html');",
+              "err": {
+                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:117663:68)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146482:19)\nFrom Your Spec Code:\n    at Context.eval (webpack://qa-ai-project/./cypress/support/commands.js:29:35)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146474:43)",
+                "diff": null
+              },
+              "uuid": "df916a94-a15c-45ff-80ae-6123127ebb6f",
+              "parentUUID": "8d1ff7b2-1e46-4080-b62b-dd979b4bcc91",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login inválido",
+              "fullTitle": "Login SauceDemo com Env login inválido",
+              "timedOut": null,
+              "duration": 299,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(Cypress.env('username'), 'errada');\ncy.get('[data-test=\"error\"]').should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:117663:68)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146482:19)\nFrom Your Spec Code:\n    at Context.eval (webpack://qa-ai-project/./cypress/support/commands.js:29:35)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146474:43)",
+                "diff": null
+              },
+              "uuid": "98f8b6ec-ff67-4c7a-bbe5-348fa11fccff",
+              "parentUUID": "8d1ff7b2-1e46-4080-b62b-dd979b4bcc91",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "df916a94-a15c-45ff-80ae-6123127ebb6f",
+            "98f8b6ec-ff67-4c7a-bbe5-348fa11fccff"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1395,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

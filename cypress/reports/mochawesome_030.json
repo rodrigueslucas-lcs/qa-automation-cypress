@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-12T17:47:25.252Z",
+    "end": "2026-05-12T17:47:32.572Z",
+    "duration": 7320,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "604400ae-af5e-4428-99bf-b4334ba748f3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cart.cy.js",
+      "file": "cypress\\e2e\\cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5e1cf052-d40a-4804-b5d2-cb7331da2099",
+          "title": "Carrinho SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve adicionar produto ao carrinho",
+              "fullTitle": "Carrinho SauceDemo deve adicionar produto ao carrinho",
+              "timedOut": null,
+              "duration": 2374,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.addBackpackToCart();\n_InventoryPage.default.validateCartCount(1);",
+              "err": {},
+              "uuid": "e21616dd-208f-41ec-beec-17f539092ee8",
+              "parentUUID": "5e1cf052-d40a-4804-b5d2-cb7331da2099",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deve acessar o carrinho",
+              "fullTitle": "Carrinho SauceDemo deve acessar o carrinho",
+              "timedOut": null,
+              "duration": 3417,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.addBackpackToCart();\n_InventoryPage.default.goToCart();\ncy.url().should('include', 'cart');",
+              "err": {},
+              "uuid": "951b4cdf-b8af-4112-a678-fbf29be2568b",
+              "parentUUID": "5e1cf052-d40a-4804-b5d2-cb7331da2099",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e21616dd-208f-41ec-beec-17f539092ee8",
+            "951b4cdf-b8af-4112-a678-fbf29be2568b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
